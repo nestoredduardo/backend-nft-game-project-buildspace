@@ -22,7 +22,11 @@ const main = async () => {
       'https://imgur.com/tL702vI.png',
     ],
     [911, 2321, 1842, 1689, 294, 915, 49, 282], //market cap in billion
-    [41, 168, 220, 443, 27, 102, 4, 23] //2021 revenue in billions
+    [41, 168, 220, 443, 27, 102, 4, 23], //2021 revenue in billions
+    'Apple',
+    'https://i.imgur.com/8WU8SsA.jpg',
+    24570, //market cap in billions with one extra zero
+    347
   );
   await gameContract.deployed();
   console.log('Contract deployed to:', gameContract.address);
@@ -34,9 +38,11 @@ const main = async () => {
   let returnedTokenUri = await gameContract.tokenURI(1);
   console.log('Minted NFT #1: \n', 'Token URI', returnedTokenUri);
 
-  txn = await gameContract.mintCharacterNFT(1);
+  txn = await gameContract.attackBoss();
   await txn.wait();
-  console.log('Minted NFT #2: \n', 'Token URI', returnedTokenUri);
+
+  txn = await gameContract.attackBoss();
+  await txn.wait();
 };
 
 const runMain = async () => {
