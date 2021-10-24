@@ -21,8 +21,8 @@ const main = async () => {
       'https://imgur.com/Fg1B9Pn',
       'https://imgur.com/tL702vI',
     ],
-    [911.29, 2321, 1842, 1689, 294.22, 915.21, 49.66, 282.47], //market cap in billion
-    [41.86, 168.08, 220.26, 443.29, 27.58, 102.42, 4.45, 23.84] //2021 revenue in billions
+    [911, 2321, 1842, 1689, 294, 915, 49, 282], //market cap in billion
+    [41, 168, 220, 443, 27, 102, 4, 23] //2021 revenue in billions
   );
   await gameContract.deployed();
   console.log('Contract deployed to:', gameContract.address);
