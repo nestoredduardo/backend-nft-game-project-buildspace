@@ -12,14 +12,14 @@ const main = async () => {
       'Paypal',
     ],
     [
-      'https://imgur.com/KnmcGTM',
-      'https://imgur.com/LBTUAAm',
-      'https://imgur.com/0BtR2vn',
-      'https://imgur.com/LnSB4AE',
-      'https://imgur.com/Ouwh8Ss',
-      'https://imgur.com/wdDSJsQ',
-      'https://imgur.com/Fg1B9Pn',
-      'https://imgur.com/tL702vI',
+      'https://imgur.com/KnmcGTM.png',
+      'https://imgur.com/LBTUAAm.png',
+      'https://imgur.com/0BtR2vn.png',
+      'https://imgur.com/LnSB4AE.png',
+      'https://imgur.com/Ouwh8Ss.png',
+      'https://imgur.com/wdDSJsQ.png',
+      'https://imgur.com/Fg1B9Pn.png',
+      'https://imgur.com/tL702vI.png',
     ],
     [911, 2321, 1842, 1689, 294, 915, 49, 282], //market cap in billion
     [41, 168, 220, 443, 27, 102, 4, 23] //2021 revenue in billions
@@ -36,7 +36,6 @@ const main = async () => {
 
   txn = await gameContract.mintCharacterNFT(1);
   await txn.wait();
-  let returnedTokenUri = await gameContract.tokenURI(1);
   console.log('Minted NFT #2: \n', 'Token URI', returnedTokenUri);
 };
 
