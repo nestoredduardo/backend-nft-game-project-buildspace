@@ -29,10 +29,15 @@ const main = async () => {
 
   let txn;
 
-  txn = await gameContract.mintCharacterNFT(7);
+  txn = await gameContract.mintCharacterNFT(0);
   await txn.wait();
   let returnedTokenUri = await gameContract.tokenURI(1);
-  console.log('Token URI', returnedTokenUri);
+  console.log('Minted NFT #1: \n', 'Token URI', returnedTokenUri);
+
+  txn = await gameContract.mintCharacterNFT(1);
+  await txn.wait();
+  let returnedTokenUri = await gameContract.tokenURI(1);
+  console.log('Minted NFT #2: \n', 'Token URI', returnedTokenUri);
 };
 
 const runMain = async () => {
